@@ -1,0 +1,771 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body{
+    height: 100%;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    color: rgb(255, 255, 227);
+    background-color: rgb(16, 16, 14);
+    font-family: Satoshi;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p, h1, h2, h3, h4, li, a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.dark-mode{
+    color: rgb(255, 255, 227);
+    background-color: rgb(16, 16, 14);
+}
+
+.light-mode{
+    color: rgb(16, 16, 14);
+    background-color: rgb(255, 255, 227);
+}
+
+html, body, section, div, p, h1, h2, h3, h4, a, span, li, input, button, form, 
+.dark-mode, .light-mode, #navbar, #logo, #bio-text, #resume, #educ-background, 
+#work-experience, #skills, #soft-skills, #technical-skills, #contact-form, 
+#social-media, #bio, #portfolio-content, #contact-content, .socmed-link, 
+.icon, .skill-icon, .arrow, #portrait, #coding-container img, #capstone-container img, #fullstack-container img
+.input, .form-btn, #page-nav a, #resume-header .button, #capstone-text .button,
+.toggle-track, .toggle-thumb, .toggle-icon {
+    transition: all 0.3s ease;
+}
+
+#bio-text, #resume, #educ-background, #work-experience, #skills, 
+#soft-skills, #technical-skills, #portfolio-content, #contact-content, 
+#contact-form, #social-media {
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.toggle-switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+.toggle-track {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: rgb(48, 48, 43);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.toggle-thumb {
+    position: absolute;
+    left: 63px;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(255, 255, 227);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+body.light-mode .toggle-thumb {
+    transform: translateX(26px);
+    background-color: rgb(16, 16, 14);
+}
+
+.toggle-icon {
+    display: flex;
+    margin: 0 9px;
+    font-size: 16px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.toggle-icon img{
+    width: 100%;
+    height: auto;
+}
+
+body.light-mode .toggle-track {
+    background-color: rgba(16, 16, 14, 0.2);
+}
+
+body.light-mode .toggle-thumb {
+    transform: translateX(26px);
+    background-color: rgb(16, 16, 14);
+}
+
+.form-btn, .input, #resume-header .button, #capstone-text .button, #fullstack-text .button {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body.light-mode .form-btn {
+    background-color: rgba(16, 16, 14, 0.2);
+    color: rgba(16, 16, 14, 0.6);
+}
+
+body.light-mode .input {
+    background-color: rgb(255, 255, 227);
+    border-color: rgba(16, 16, 14, 0.2);
+    color: rgb(16, 16, 14);
+}
+
+body.light-mode .input::placeholder {
+    color: rgba(16, 16, 14, 0.4);
+}
+
+body.light-mode #navbar {
+    background-color: rgb(255, 255, 227);
+}
+
+body.light-mode #page-nav a {
+    color: rgb(16, 16, 14);
+    border-color: rgba(16, 16, 14, 0.2);
+}
+
+body.light-mode #logo-div {
+    border-color: rgba(16, 16, 14, 0.2);
+}
+
+body.light-mode #logo {
+    color: rgb(16, 16, 14);
+}
+
+body.light-mode .icon, 
+body.light-mode .skill-icon, 
+body.light-mode .arrow {
+    filter: brightness(0) saturate(100%);
+}
+
+body.light-mode .socmed-link {
+    color: rgb(16, 16, 14);
+}
+
+body.light-mode #bio-text, 
+body.light-mode #resume, 
+body.light-mode #educ-background, 
+body.light-mode #work-experience, 
+body.light-mode #skills, 
+body.light-mode #soft-skills, 
+body.light-mode #technical-skills, 
+body.light-mode #contact-form, 
+body.light-mode #social-media,
+body.light-mode #bio, 
+body.light-mode #portfolio-content, 
+body.light-mode #contact-content {
+    border-color: rgba(16, 16, 14, 0.2);
+}
+
+@keyframes changecolorlight {
+    100% {
+        border-bottom: 2px solid rgb(16, 16, 14);
+    }
+}
+
+body.light-mode #page-nav a:hover, 
+body.light-mode #resume-header .button:hover {  
+    animation: changecolorlight 0.15s ease-in forwards;
+}
+
+body.light-mode section, 
+body.dark-mode section {
+    display: block;
+}
+
+body.light-mode #portrait:hover, 
+body.light-mode #bio-text:hover, 
+body.light-mode #educ-background:hover, 
+body.light-mode #work-experience:hover, 
+body.light-mode #coding-container img:hover, 
+body.light-mode #capstone-container img:hover,
+body.light-mode #fullstack-container img:hover,
+body.light-mode #soft-skills:hover, 
+body.light-mode #technical-skills:hover, 
+body.light-mode .input:hover, 
+body.light-mode #social-media:hover {
+    animation: changecolorlightmode 0.15s ease-in forwards;
+}
+
+@keyframes changecolorlightmode {
+    100% {
+        border: 2px solid rgba(16, 16, 14, 0.6);
+        background-color: rgba(16, 16, 14, 0.05);
+    }
+}
+
+@keyframes changecolorlightmode {
+    100% {
+        border: 2px solid rgba(16, 16, 14, 0.6);
+        background-color: rgba(16, 16, 14, 0.05);
+    }
+}
+
+@font-face {
+    font-family: Satoshi;
+    src: url(custom-fonts/satoshi/SATOSHI-REGULAR.OTF);
+}
+
+@font-face {
+    font-family: PassengerSans;
+    src: url(custom-fonts/passenger-sans/PassengerSans-Regular-BF63eaffd178ad9.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+section {
+    display: block;
+    overflow-y: visible;
+    min-height: 100vh;
+}
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    background-color: rgb(16, 16, 14);
+    height: 140px;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    justify-content: space-between;
+    font-family: PassengerSans;
+    opacity: 75%;
+}
+
+#logo-div{
+    display: flex;
+    width: auto;
+    border-bottom: 2px solid rgb(48, 48, 43);
+    width: 100%;
+    justify-content: space-between;
+}
+
+#logo{
+    padding-left: 40px;
+    display: flex;
+    height: 100%;
+    color: rgb(255, 255, 227);
+    text-decoration: none;
+    align-items: center;
+    padding-right: 100px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#page-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+#page-nav a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    color: rgb(255, 255, 227);
+    border-left: 2px solid rgb(48, 48, 43);
+    border-bottom: 2px solid rgb(48, 48, 43);
+}
+
+
+
+#link1, #link2, #link3, #link4{
+    display: flex;
+    padding: 0 40px;
+    cursor: pointer;
+}
+
+
+#link1{
+    text-align: center;
+}
+
+#page-nav a:hover, #resume-header .button:hover, #capstone-container .button:hover, #fullstack-container .button:hover{  
+    animation: changecolorbutton 0.15s ease-in forwards;
+}
+
+@keyframes changecolorbutton {
+    100%{
+        border-bottom: 2px solid rgb(255, 255, 227);
+    }
+}
+
+#landing {
+    height: 100vh;
+    padding: 80px;
+    padding-left: 40px;
+    padding-top: 200px;
+    display: flex;
+}
+
+#title {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    max-width: 100%;
+}
+
+#name {
+    display: flex;
+    flex-direction: column;
+}
+
+#name h1{
+    font-size: 186px;
+    line-height: 80%;
+    letter-spacing: -8px;
+}
+
+#line2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#firstnm {
+    font-style: italic;
+}
+
+#about{
+    min-height: 100vh;
+    padding: 60px;
+    align-content: center;
+}
+
+#resume-section, #portfolio{
+    height: fit-content;
+    padding: 60px;
+}
+
+#projects{
+    height: 100vh;
+    background-color: rgb(16, 16, 14);
+}
+
+#bio, #portfolio-content, #contact-content{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    border: 2px solid rgb(48, 48, 43);
+    padding: 60px;
+    border-radius: 4px;
+}
+
+h1{
+    font-size: 36px;
+}
+
+#bio-content{
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    height: auto;
+}
+
+#bio-text, #resume{
+    padding: 50px;
+    border: 2px solid rgb(48, 48, 43);
+    border-radius: 4px;
+    text-align: justify;
+}
+
+#bio-text{
+    font-size: 18px;
+    align-self: center;
+}
+
+h3{
+    text-decoration: underline;
+}
+
+#bio-content img {
+    width: 33%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid rgb(48, 48, 43);
+}
+
+
+@keyframes fadeOut {
+    from{
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.resume-logo{
+    height: 277px;
+    width: 277px;
+}
+
+#resume{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    padding: 60px;
+}
+
+#resume-header .button, #capstone-text .button, #fullstack-text .button{
+    display: flex;
+    padding: 4px 16px;
+    border-radius: 4px;
+    border: 2px solid rgb(48, 48, 43);
+    align-items: center;
+    cursor: pointer;
+}
+
+#capstone-text .button, #fullstack-text .button{
+    width: fit-content;
+    justify-self: center;
+    padding: 8px 16px;
+}
+
+#link-ng-website, #link-ng-laro{
+    text-decoration: none;
+    color: rgb(255, 255, 227);
+    text-align: center;
+}
+
+#resume-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#resume-header a{
+    color:rgb(255, 255, 227);
+    text-decoration: none;
+}
+
+#educ-background, #work-experience, #skills{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border: 2px solid rgb(48, 48, 43);
+    border-radius: 4px;
+    gap: 60px;
+}
+
+#schools{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    text-align: center;
+}
+
+.subheading{
+    font-size: 16px;
+    font-style: italic;
+}
+
+#work-experience img{
+    height: 277px;
+    width: 277px;
+}
+
+#phoenix{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#phoenix ul li{
+    list-style: none;
+}
+
+#phoenix ul li a{
+    color: rgb(255, 255, 227);
+}
+
+#skills{
+    flex-direction: column;
+}
+
+#skills-container{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+#soft-skills, #technical-skills{
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#soft-skills{
+    flex-direction: column;
+    border: 2px solid rgb(48, 48, 43);
+    border-radius: 4px;
+    padding: 60px;
+    gap: 10px;
+}
+
+#soft-skills ul{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+#soft-skills ul li{
+    list-style: none;
+}
+
+#asd{
+    display: flex;
+    flex-direction: row;
+}
+#technical-skills{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid rgb(48, 48, 43);
+    border-radius: 4px;
+    padding: 60px;
+    gap: 20px;
+}
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+#webdev{
+    width: 80px;
+}
+
+#portfolio-content{
+    flex-direction: column;
+}
+
+#portfolio-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#control{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-content: center;
+}
+
+#control img{
+    width: 40px;
+    cursor: pointer;
+}
+
+#page1, #page2, #page3 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    transition: opacity 0.3s ease, display 0s;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#coding-container, #capstone-container, #fullstack-container{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+}
+
+#coding-container img, #capstone-container img, #fullstack-container img{
+    width: 45%;
+    height: auto;
+    border: 2px solid rgb(48, 48, 43);
+    border-radius: 4px;
+}
+
+#coding-text, #capstone-text, #fullstack-text{
+    text-align: center;
+}
+
+#cpp-title, #capstone-title, #fullstack-title{
+    font-weight: 700;
+}
+
+#cpp-subtitle, #capstone-subtitle, #fullstack-subtitle{
+    font-style: italic;
+}
+
+@keyframes slideOutLeft {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(-100%); opacity: 0; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOutRight {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-out-left {
+    animation: slideOutLeft 0.5s forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s forwards;
+}
+
+.slide-out-right {
+    animation: slideOutRight 0.5s forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s forwards;
+}
+
+#contact{
+    padding: 60px;
+    align-content: center;
+}
+
+#contact-content{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-content-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+#contact-form, #social-media{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(48, 48, 43);
+    border-radius: 4px;
+    padding: 60px;
+    gap: 10px;
+}
+
+#contact-form{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#contact-form-input{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-child{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.input {
+    background-color: rgb(16, 16, 14);
+    border: 2px solid rgb(48, 48, 43);
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#form-button{
+    display: flex;
+    gap: 10px;
+}
+
+.form-btn {
+    background-color: rgb(48, 48, 43);
+    border-radius: 4px;
+    padding: 16px 28px;
+    color: rgba(255, 255, 227, 0.402);
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.input::placeholder{
+    color: rgba(255, 255, 227, 0.402);
+    font-size: 14px;
+}
+
+.icon, .skill-icon, .arrow{
+    filter: brightness(0) invert(95%) sepia(7%) saturate(498%) hue-rotate(28deg) brightness(108%) contrast(94%);
+}
+
+.skill-icon{
+    scale: 50%;
+}
+
+#social-media{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.socmed-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.socmed-link, .input{
+    color: rgb(255, 255, 227);
+    text-decoration: none;
+}
+
+#portrait:hover, #bio-text:hover, #educ-background:hover, #work-experience:hover, #coding-container img:hover, #capstone-container img:hover, #soft-skills:hover, #technical-skills:hover, .input:hover, #social-media:hover, #fullstack-container img:hover{
+    animation: changecolor 0.15s ease-in forwards;
+}
+
+@keyframes changecolor{
+    100%{
+        border: 2px solid rgba(255, 255, 227, 0.562);
+        background-color: rgba(48, 48, 43, 0.655);
+    }
+}
+

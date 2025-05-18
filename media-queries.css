@@ -1,0 +1,303 @@
+@media screen and (max-width: 1024px) {
+    #landing {
+        padding: 60px 40px;
+        padding-top: 180px;
+        align-content: center;
+    }
+
+    #name h1 {
+        font-size: 120px;
+    }
+
+    #bio-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    #bio-content img {
+        width: 250px;
+        height: auto;
+        max-width: 80%;
+        object-fit: contain;
+    }
+
+    #schools {
+        flex-direction: column;
+    }
+
+    #skills-container {
+        flex-direction: column;
+    }
+
+    .resume-logo {
+        width: 200px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    #coding-container, #capstone-container, #fullstack-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #coding-container img, #capstone-container img, #fullstack-container img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    #contact-content-container {
+        flex-direction: column;
+    }
+
+    .skill-icon {
+        width: 80px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #navbar {
+        height: auto;
+        flex-direction: column;
+    }
+
+    #logo-div {
+        width: 100%;
+        justify-content: space-between;
+        padding: 15px 0;
+        border-bottom: 2px solid rgb(48, 48, 43);
+    }
+
+    #logo {
+        padding-left: 20px;
+        font-size: 24px;
+    }
+
+    #page-nav {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    #page-nav a {
+        width: 50%;
+        height: 60px;
+        justify-content: center;
+        border-bottom: 2px solid rgb(48, 48, 43);
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    #landing {
+        padding: 40px 20px;
+        padding-top: 160px;
+    }
+
+    #name h1 {
+        font-size: 60px;
+    }
+
+    #title {
+        gap: 40px;
+    }
+
+    #about, #resume-section, #portfolio, #contact {
+        padding: 30px 20px;
+    }
+
+    #bio, #portfolio-content, #contact-content {
+        padding: 30px;
+        gap: 40px;
+    }
+
+    #bio-content {
+        gap: 30px;
+    }
+
+    #bio-content img {
+        width: 200px;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    #bio-text, #resume {
+        padding: 30px;
+    }
+
+    #resume {
+        padding: 30px;
+        gap: 40px;
+    }
+
+    #resume-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #educ-background, #work-experience, #skills {
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .resume-logo {
+        height: auto;
+        width: 180px;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    #soft-skills, #technical-skills {
+        padding: 30px;
+    }
+
+    #asd {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .icon, .skill-icon {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 40px;
+        object-fit: contain;
+    }
+
+    #webdev {
+        width: auto;
+        max-width: 60px;
+    }
+
+    #portfolio-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #coding-container img, #capstone-container img, #fullstack-container img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    #contact-form, #social-media {
+        padding: 30px;
+    }
+
+    #contact-form-input {
+        flex-direction: column;
+    }
+
+    .socmed-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #theme-toggle {
+        margin-right: 20px;
+    }
+
+    .toggle-icon img {
+        width: 18px;
+        height: auto;
+    }
+
+    body.light-mode .toggle-thumb {
+        transform: translateX(26px);
+    }
+    
+    #fullstack-text .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #name h1 {
+        font-size: 46px;
+        letter-spacing: -4px;
+    }
+
+    #form-button {
+        flex-direction: column;
+    }
+
+    .form-btn {
+        width: 100%;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    #bio-text {
+        font-size: 16px;
+    }
+
+    .sch h4 {
+        font-size: 16px;
+    }
+
+    #phoenix ul li {
+        font-size: 14px;
+    }
+    
+    #fullstack-text {
+        font-size: 14px;
+    }
+    
+    #fullstack-title {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    #landing {
+        padding-top: 180px;
+    }
+
+    #page-nav {
+        flex-wrap: nowrap;
+    }
+
+    #page-nav a {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .slide-out-left, .slide-in-right, .slide-out-right, .slide-in-left {
+        animation-duration: 0.3s;
+    }
+
+    .toggle-thumb {
+        position: absolute;
+        left: 40px;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+    }
+
+    body.light-mode .toggle-thumb {
+        transform: translateX(20px);
+    }
+
+    #landing{
+        align-items: center;
+        padding-top: 100px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    body.light-mode .toggle-thumb {
+        transform: translateX(26px);
+    }
+}
