@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const page3 = document.getElementById('page3');
     
     if (page1 && page2 && page3) {
-        // Initialize pages
         page1.style.display = 'flex';
         page2.style.display = 'none';
         page3.style.display = 'none';
@@ -111,13 +110,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const totalPages = 3;
         
         leftArrow.addEventListener('click', function() {
-            // Navigate to previous page or wrap to the end
             const previousPage = currentPage === 1 ? totalPages : currentPage - 1;
             navigateToPage(previousPage);
         });
         
         rightArrow.addEventListener('click', function() {
-            // Navigate to next page or wrap to the beginning
             const nextPage = currentPage === totalPages ? 1 : currentPage + 1;
             navigateToPage(nextPage);
         });
@@ -128,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const currentPageElement = document.getElementById(`page${currentPage}`);
             const targetPageElement = document.getElementById(`page${targetPage}`);
             
-            // Determine animation direction
             let outAnimation, inAnimation;
             if ((targetPage > currentPage && !(currentPage === 1 && targetPage === totalPages)) || 
                 (currentPage === totalPages && targetPage === 1)) {
@@ -139,14 +135,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 inAnimation = 'slide-in-left';
             }
             
-            // Animate out current page
             currentPageElement.classList.add(outAnimation);
             
             setTimeout(() => {
                 currentPageElement.style.display = 'none';
                 currentPageElement.classList.remove(outAnimation);
                 
-                // Animate in target page
                 targetPageElement.classList.add(inAnimation);
                 targetPageElement.style.display = 'flex';
                 

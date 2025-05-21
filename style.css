@@ -248,6 +248,7 @@ section {
     justify-content: space-between;
     font-family: PassengerSans;
     opacity: 75%;
+    animation: navbarFadeIn 1s ease forwards;
 }
 
 #logo-div{
@@ -324,11 +325,13 @@ section {
     flex-direction: column;
     gap: 80px;
     max-width: 100%;
+    animation: fadeIn .5s ease forwards;
 }
 
 #name {
     display: flex;
     flex-direction: column;
+    animation: fadeIn .3s ease forwards;
 }
 
 #name h1{
@@ -769,3 +772,24 @@ h3{
     }
 }
 
+@keyframes fadeIn {
+    0%{
+        transform: translateY(5px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-5px);
+        opacity: 1;
+    }
+}
+
+@keyframes navbarFadeIn {
+    0%{
+        transform: translateY(5px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-5px);
+        opacity: .75;
+    }
+}
