@@ -237,6 +237,8 @@ section {
 }
 
 #navbar{
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: row;
     text-decoration: none;
@@ -248,7 +250,7 @@ section {
     justify-content: space-between;
     font-family: PassengerSans;
     opacity: 75%;
-    animation: navbarFadeIn 1s ease forwards;
+    animation: navbarFadeIn 1.5s ease forwards;
 }
 
 #logo-div{
@@ -325,13 +327,12 @@ section {
     flex-direction: column;
     gap: 80px;
     max-width: 100%;
-    animation: fadeIn .5s ease forwards;
+    animation: fadeIn 1s ease forwards;
 }
 
 #name {
     display: flex;
     flex-direction: column;
-    animation: fadeIn .3s ease forwards;
 }
 
 #name h1{
@@ -774,22 +775,22 @@ h3{
 
 @keyframes fadeIn {
     0%{
-        transform: translateY(5px);
+        transform: translateY(20px);
         opacity: 0;
     }
     100%{
-        transform: translateY(-5px);
+        transform: translateY(0);
         opacity: 1;
     }
 }
 
 @keyframes navbarFadeIn {
     0%{
-        transform: translateY(5px);
+        transform: translateY(10px);
         opacity: 0;
     }
     100%{
-        transform: translateY(-5px);
+        transform: translateY(0);
         opacity: .75;
     }
 }
